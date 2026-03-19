@@ -1,0 +1,4 @@
+res://scenes/player.tscn
+res://scripts/player.gd
+res://scripts/gun.gd
+res://scenes/gun.tscn
