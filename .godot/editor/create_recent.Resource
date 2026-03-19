@@ -1,0 +1,4 @@
+SpriteFrames
+WeaponData
+WeaponEffect
+Resource

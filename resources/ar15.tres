@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3 uid="uid://deymcnj3w8ld3"]
+
+[ext_resource type="Script" uid="uid://dxylv862q2ihp" path="res://scripts/weapon_effects.gd" id="1_o8s8l"]
+[ext_resource type="SpriteFrames" uid="uid://s7rn2t6yyfrn" path="res://resources/ar15_animation.tres" id="1_rcqa1"]
+[ext_resource type="Script" uid="uid://cwj1p1utj15w" path="res://scripts/weapon_data.gd" id="2_3kp1h"]
+[ext_resource type="PackedScene" uid="uid://c7auexy0jjrgp" path="res://scenes/bullet.tscn" id="2_rcqa1"]
+[ext_resource type="Resource" uid="uid://bjceub6g48pn7" path="res://resources/patlatma.tres" id="3_66bgy"]
+
+[resource]
+script = ExtResource("2_3kp1h")
+projectile_scene = ExtResource("2_rcqa1")
+weapon_name = "AR15"
+animated_sprite = ExtResource("1_rcqa1")
+fire_rate = 25.0
+recoil_magnitude = 20.0
+effects = Array[ExtResource("1_o8s8l")]([ExtResource("3_66bgy")])
+metadata/_custom_type_script = "uid://cwj1p1utj15w"

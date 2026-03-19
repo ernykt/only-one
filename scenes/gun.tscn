@@ -1,7 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://catixm2gaqvdm"]
+[gd_scene format=3 uid="uid://catixm2gaqvdm"]
 
 [ext_resource type="Script" uid="uid://bblbhhdsykwl2" path="res://scripts/gun.gd" id="1_og67c"]
-[ext_resource type="Texture2D" uid="uid://q2gspx5pif2d" path="res://Pistol_V1.00 - SHOOTING (ALL FX).png" id="2_gp1hk"]
+[ext_resource type="Texture2D" uid="uid://q2gspx5pif2d" path="res://assets/Pistol_V1.00 - SHOOTING (ALL FX).png" id="2_gp1hk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qd4js"]
 atlas = ExtResource("2_gp1hk")
@@ -93,17 +93,17 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Gun" type="Node2D"]
+[node name="Gun" type="Node2D" unique_id=477069521]
 script = ExtResource("1_og67c")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1117931940]
 position = Vector2(152, 0)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_gp1hk")
 animation = &"Idle"
 autoplay = "Idle"
 
-[node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(184, -32)
+[node name="Marker2D" type="Marker2D" parent="." unique_id=294227378]
+position = Vector2(168, -32)
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

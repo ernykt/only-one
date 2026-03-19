@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="PatlatmaEffect" format=3 uid="uid://bjceub6g48pn7"]
+
+[ext_resource type="Script" uid="uid://8fxugx5efek3" path="res://scripts/patlatma_efekti.gd" id="1_m8onu"]
+
+[resource]
+script = ExtResource("1_m8onu")
+metadata/_custom_type_script = "uid://dxylv862q2ihp"

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://wm2a87xs38vj"]
+
+[ext_resource type="Script" uid="uid://jsj2abb3wxq6" path="res://scripts/boss_weapon.gd" id="1_0moko"]
+[ext_resource type="Resource" uid="uid://cxxe7pkf4mu8v" path="res://resources/boss_weapon.tres" id="2_npltx"]
+[ext_resource type="SpriteFrames" uid="uid://dninw10jfbfbv" path="res://resources/boss_weapon_animation.tres" id="3_bhkxc"]
+
+[node name="BossWeapon" type="Node2D" unique_id=403025996]
+scale = Vector2(3, 3)
+script = ExtResource("1_0moko")
+data = ExtResource("2_npltx")
+metadata/_custom_type_script = "uid://bhqhp233iaa66"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1395143242]
+position = Vector2(72, 0)
+sprite_frames = ExtResource("3_bhkxc")
+animation = &"Idle"
+speed_scale = 0.5
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=877624832]
+position = Vector2(88, 0)

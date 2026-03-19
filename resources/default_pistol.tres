@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3 uid="uid://bypck14obtv6j"]
+
+[ext_resource type="SpriteFrames" uid="uid://6bt5ml4b4boa" path="res://resources/pistol_animation.tres" id="1_2a8gx"]
+[ext_resource type="Script" uid="uid://dxylv862q2ihp" path="res://scripts/weapon_effects.gd" id="1_62l1b"]
+[ext_resource type="Script" uid="uid://cwj1p1utj15w" path="res://scripts/weapon_data.gd" id="2_8iv6y"]
+[ext_resource type="Script" uid="uid://d2oawcxu7cpq3" path="res://scripts/test_efekti.gd" id="2_tbne7"]
+[ext_resource type="Resource" uid="uid://bjceub6g48pn7" path="res://resources/patlatma.tres" id="3_wl8uk"]
+[ext_resource type="PackedScene" uid="uid://c7auexy0jjrgp" path="res://scenes/bullet.tscn" id="4_2a8gx"]
+
+[sub_resource type="Resource" id="Resource_wl8uk"]
+script = ExtResource("2_tbne7")
+metadata/_custom_type_script = "uid://d2oawcxu7cpq3"
+
+[resource]
+script = ExtResource("2_8iv6y")
+projectile_scene = ExtResource("4_2a8gx")
+weapon_name = "default"
+animated_sprite = ExtResource("1_2a8gx")
+fire_rate = 1.0
+recoil_magnitude = 15.0
+effects = Array[ExtResource("1_62l1b")]([SubResource("Resource_wl8uk"), ExtResource("3_wl8uk")])

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c7auexy0jjrgp"]
+[gd_scene format=3 uid="uid://c7auexy0jjrgp"]
 
 [ext_resource type="Texture2D" uid="uid://bfvegghcdo8g5" path="res://assets/All_Fire_Bullet_Pixel_16x16_04.png" id="1_mkf8s"]
 [ext_resource type="Script" uid="uid://dueljnvbj0lfm" path="res://scripts/bullet.gd" id="1_y25gk"]
@@ -6,16 +6,17 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y25gk"]
 size = Vector2(18, 8)
 
-[node name="Bullet" type="Area2D"]
+[node name="Bullet" type="Area2D" unique_id=1044636716]
 scale = Vector2(3, 3)
 script = ExtResource("1_y25gk")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1751293878]
 texture = ExtResource("1_mkf8s")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=473883122]
 shape = SubResource("RectangleShape2D_y25gk")
 
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=319576629]
 
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

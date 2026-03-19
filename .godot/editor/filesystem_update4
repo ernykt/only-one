@@ -1,4 +1,13 @@
 res://scenes/player.tscn
+res://resources/pistol_animation.tres
+res://resources/default_pistol.tres
+res://resources/ar15_animation.tres
 res://scripts/player.gd
-res://scripts/gun.gd
-res://scenes/gun.tscn
+res://scenes/enemy.tscn
+res://scripts/enemy.gd
+res://scenes/Main.tscn
+res://scripts/weapon.gd
+res://scenes/boss_weapon.tscn
+res://resources/boss_weapon.tres
+res://resources/boss_weapon_animation.tres
+res://scripts/boss_weapon.gd

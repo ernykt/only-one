@@ -1,34 +1,91 @@
 extends CharacterBody2D
 class_name Player
 
-const bullet = preload("res://scenes/bullet.tscn")
-@onready var gun: Node2D = $Gun
-@onready var gun_animation_node = get_node("Gun").get_child(0)
+@onready var weapon_holder: Marker2D = $WeaponHolder
+@onready var dash_timer: Timer = $DashTimer
+@onready var dash_cool_down: Timer = $DashCoolDown
+@onready var sprite_2d: AnimatedSprite2D = $Sprite2D
 
-const SPEED = 300.0
+enum State { IDLE, MOVE, DASH }
+
+var speed = 300.0
+var current_state: State = State.IDLE
+var last_state: State = State.IDLE
+var dash_speed: int = 900
+var dash_direction = Vector2.ZERO
+var can_dash: bool = true
 
 func _physics_process(_delta: float) -> void:
-	get_input()
-	if Input.is_action_just_pressed("shoot"):
-		if (gun_animation_node.is_playing() and !gun_animation_node.animation == "Idle" ):	return
-		gun_animation_node.play("Fire")
-		shoot()
-
+	match current_state:
+		State.IDLE:
+			idle_state()
+		State.MOVE:
+			move_state()
+		State.DASH:
+			dash_state()
+	handle_shooting()
 	move_and_slide()
 
-func get_input():
-	var direction = Input.get_vector("ui_left","ui_right","ui_up","ui_down")
-	if direction:
-		velocity = direction * SPEED
-	else:
-		velocity = velocity.lerp(Vector2.ZERO, 0.25)
+func get_movement_direction() -> Vector2:
+	return Input.get_vector("move left", "move right", "move up", "move down")
 
-func shoot():
-	var gun_marker = get_node("Gun").get_child(1)
-	var bullet_instance = bullet.instantiate()
-	bullet_instance.position = gun_marker.global_position
-	bullet_instance.rotation = gun_marker.global_rotation
-	get_parent().add_child(bullet_instance)
+func change_state(new_state: State):
+	if current_state == new_state:
+		return
+	last_state = current_state
+	current_state = new_state
 
-func _on_animated_sprite_2d_animation_finished() -> void:
-	print("test")
+func handle_shooting():
+	if Input.is_action_pressed("shoot"):
+		sprite_2d.flip_h = false
+		for child in weapon_holder.get_children():
+			if child is Weapon and child.visible:
+				child.shoot(self)
+
+func move_state():
+	handle_sprite_direction()
+	sprite_2d.play("Move")
+	var dir = get_movement_direction()
+
+	if dir == Vector2.ZERO:
+		change_state(State.IDLE)
+		return
+	if Input.is_action_just_pressed("Dash") and can_dash:
+		dash_timer.start(.5)
+		change_state(State.DASH)
+
+	velocity = dir * speed
+
+func idle_state():
+	sprite_2d.play("Idle")
+	var dir = get_movement_direction()
+	
+	if dir != Vector2.ZERO:
+		change_state(State.MOVE)
+		return
+	if Input.is_action_just_pressed("Dash") and can_dash:
+		dash_timer.start(.5)
+		change_state(State.DASH)
+	velocity = velocity.lerp(Vector2.ZERO, 0.2)
+	
+func dash_state():
+	if dash_timer.time_left <= 0:
+		change_state(State.IDLE)
+	if can_dash:
+		sprite_2d.play("Dash")
+		can_dash = false
+		dash_cool_down.start(1.5)
+		dash_direction = global_position.direction_to(get_global_mouse_position()).normalized()
+		if dash_direction.x <= 0:
+			sprite_2d.flip_h = true
+		velocity = dash_direction * dash_speed
+		
+func _on_dash_cool_down_timeout() -> void:
+	can_dash = true
+
+func handle_sprite_direction():
+	var dir = get_movement_direction()
+	if dir == Vector2.LEFT:
+		sprite_2d.flip_h = true
+	if dir == Vector2.RIGHT:
+		sprite_2d.flip_h = false

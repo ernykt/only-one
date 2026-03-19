@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://dkssllvtxya30"]
+
+[ext_resource type="PackedScene" uid="uid://bbs8dyixkvqov" path="res://scenes/weapon.tscn" id="1_x2qse"]
+[ext_resource type="Resource" uid="uid://deymcnj3w8ld3" path="res://resources/ar15.tres" id="2_6ya5k"]
+[ext_resource type="Texture2D" uid="uid://clpghuual5upp" path="res://Assault_rifle_V1.00/WEAPON/[FULL_AUTO]_Assault_rifle_V1.00.png" id="3_gnbqd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_flx4p"]
+atlas = ExtResource("3_gnbqd")
+region = Rect2(0, 0, 128, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2lpoh"]
+atlas = ExtResource("3_gnbqd")
+region = Rect2(128, 0, 128, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqtrq"]
+atlas = ExtResource("3_gnbqd")
+region = Rect2(256, 0, 128, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r6yid"]
+atlas = ExtResource("3_gnbqd")
+region = Rect2(384, 0, 128, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lj1a7"]
+atlas = ExtResource("3_gnbqd")
+region = Rect2(512, 0, 128, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_delgf"]
+atlas = ExtResource("3_gnbqd")
+region = Rect2(640, 0, 128, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wi5fd"]
+atlas = ExtResource("3_gnbqd")
+region = Rect2(768, 0, 128, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12rmh"]
+atlas = ExtResource("3_gnbqd")
+region = Rect2(896, 0, 128, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ej5a"]
+atlas = ExtResource("3_gnbqd")
+region = Rect2(1024, 0, 128, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3saeb"]
+atlas = ExtResource("3_gnbqd")
+region = Rect2(0, 0, 128, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_llf3p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_flx4p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2lpoh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqtrq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r6yid")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lj1a7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_delgf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wi5fd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12rmh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ej5a")
+}],
+"loop": false,
+"name": &"Fire",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3saeb")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="LongRifle" unique_id=1119232222 instance=ExtResource("1_x2qse")]
+rotation = 0.0
+data = ExtResource("2_6ya5k")
+
+[node name="AnimatedSprite" parent="." index="0" unique_id=1879054847]
+position = Vector2(240, 8)
+rotation = 0.0
+scale = Vector2(2.4, 2.4)
+sprite_frames = SubResource("SpriteFrames_llf3p")
+speed_scale = 5.0
+
+[node name="Marker2D" parent="." index="1" unique_id=1362335760]
+position = Vector2(280, -8)
+rotation = 0.0
