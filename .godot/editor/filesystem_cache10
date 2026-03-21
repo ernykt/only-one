@@ -1,7 +1,9 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1773957409
+::res://::1774114060
+bg.jpg::CompressedTexture2D::4551417008518661457::1774110361::1774110380::1::::<><><>0<>0<>f0a945d256e4b52cbe70efab09ba9be3<>res://.godot/imported/bg.jpg-be0bbb7afea23fe3e63b8f540e0adfdd.ctex::
 icon.svg::CompressedTexture2D::4443372300262697970::1772111210::1772111967::1::::<><><>0<>0<>fa9f256978fcd0bc279b6531ef347f4e<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1773918848::0::1::::<><><>0<>0<><>::
+Textures-16.png::CompressedTexture2D::6627786846213779822::1774114019::1774114062::1::::<><><>0<>0<>125881f5e395b7af76c7a773f6efeffa<>res://.godot/imported/Textures-16.png-e57ba6648d0422b49ba2db74772f2d9c.ctex::
 [FULL_MUZZLE_FLASH] Assault_rifle_V1.00.png::CompressedTexture2D::214360820548082515::1773930157::1773930157::1::::<><><>0<>0<>995c4e5f3f980825aeb4480f4cf5df36<>res://.godot/imported/[FULL_MUZZLE_FLASH] Assault_rifle_V1.00.png-6fa8eb931118d15ba93ffb3633cce09d.ctex::
 [SHOOTING_CHAMBER_OPEN] Shotgun_V1.02.png::CompressedTexture2D::4346560648438706833::1773957397::1773957409::1::::<><><>0<>0<>26ba772460e666002c79ea41bcdcc802<>res://.godot/imported/[SHOOTING_CHAMBER_OPEN] Shotgun_V1.02.png-5c0d59b57640df4d6e5741e1934bbb6b.ctex::
 ::res://ASSAULT RIFLE/::1773929521
@@ -2118,31 +2120,37 @@ death_2.png::CompressedTexture2D::2436710160267899740::1773918848::1773918848::1
 weaponR1.png::CompressedTexture2D::705793754461292044::1773918848::1773918848::1::::<><><>0<>0<>62469dddc24a693db7c12fda7a60a424<>res://.godot/imported/weaponR1.png-19f344fe1afb785140bc89e2009769fc.ctex::
 weaponR2.png::CompressedTexture2D::7792859070170737737::1773918848::1773918848::1::::<><><>0<>0<>197cd38176e78adec730407d27c732e2<>res://.godot/imported/weaponR2.png-2f7032ab5f2e15d637fb220a4ccd4fdb.ctex::
 weaponR3.png::CompressedTexture2D::2056982364917104497::1773918848::1773918848::1::::<><><>0<>0<>3cd998a98702645d42290271e8b4503f<>res://.godot/imported/weaponR3.png-ecf1312a90516603b3d39ffcb0000d5c.ctex::
-::res://resources/::1773944989
-ar15.tres::Resource/WeaponData::7490295365239567446::1773937209::0::1::::<><><>0<>0<><>::uid://dxylv862q2ihp::::res://scripts/weapon_effects.gd<>uid://s7rn2t6yyfrn::::res://resources/ar15_animation.tres<>uid://cwj1p1utj15w::::res://scripts/weapon_data.gd<>uid://c7auexy0jjrgp::::res://scenes/bullet.tscn<>uid://bjceub6g48pn7::::res://resources/patlatma.tres
-ar15_animation.tres::SpriteFrames::1330516126735546947::1773944989::0::1::::<><><>0<>0<><>::uid://db3qyb3b62p8::::res://[FULL_MUZZLE_FLASH] Assault_rifle_V1.00.png
-default_pistol.tres::Resource/WeaponData::4102059300285992995::1773944989::0::1::::<><><>0<>0<><>::uid://6bt5ml4b4boa::::res://resources/pistol_animation.tres<>uid://dxylv862q2ihp::::res://scripts/weapon_effects.gd<>uid://cwj1p1utj15w::::res://scripts/weapon_data.gd<>uid://d2oawcxu7cpq3::::res://scripts/test_efekti.gd<>uid://bjceub6g48pn7::::res://resources/patlatma.tres<>uid://c7auexy0jjrgp::::res://scenes/bullet.tscn
+::res://resources/::1774113844
+ar15.tres::Resource/WeaponData::7490295365239567446::1774110282::0::1::::<><><>0<>0<><>::uid://dxylv862q2ihp::::res://scripts/weapon_effects.gd<>uid://s7rn2t6yyfrn::::res://resources/ar15_animation.tres<>uid://cwj1p1utj15w::::res://scripts/weapon_data.gd<>uid://c7auexy0jjrgp::::res://scenes/bullet.tscn<>uid://bjceub6g48pn7::::res://resources/patlatma.tres
+ar15_animation.tres::SpriteFrames::1330516126735546947::1774108685::0::1::::<><><>0<>0<><>::uid://db3qyb3b62p8::::res://[FULL_MUZZLE_FLASH] Assault_rifle_V1.00.png
+boss_shotgun.tres::Resource/ShotgunEffect::2008436404599993323::1774111568::0::1::::<><><>0<>0<><>::uid://ch7800840b1rv::::res://scripts/boss_shotgun.gd
+boss_weapon.tres::Resource/WeaponData::6434966276345067415::1774113844::0::1::::<><><>0<>0<><>::uid://dxylv862q2ihp::::res://scripts/weapon_effects.gd<>uid://dninw10jfbfbv::::res://resources/boss_weapon_animation.tres<>uid://c7auexy0jjrgp::::res://scenes/bullet.tscn<>uid://cwj1p1utj15w::::res://scripts/weapon_data.gd<>uid://3u5wigu5olhb::::res://resources/boss_shotgun.tres
+boss_weapon_animation.tres::SpriteFrames::8089062053420933891::1774108685::0::1::::<><><>0<>0<><>::uid://b26rho8i4vdnt::::res://[SHOOTING_CHAMBER_OPEN] Shotgun_V1.02.png
+default_pistol.tres::Resource/WeaponData::4102059300285992995::1774108685::0::1::::<><><>0<>0<><>::uid://6bt5ml4b4boa::::res://resources/pistol_animation.tres<>uid://dxylv862q2ihp::::res://scripts/weapon_effects.gd<>uid://cwj1p1utj15w::::res://scripts/weapon_data.gd<>uid://d2oawcxu7cpq3::::res://scripts/test_efekti.gd<>uid://bjceub6g48pn7::::res://resources/patlatma.tres<>uid://c7auexy0jjrgp::::res://scenes/bullet.tscn
 patlatma.tres::Resource/PatlatmaEffect::3022527716517644014::1773923334::0::1::::<><><>0<>0<><>::uid://8fxugx5efek3::::res://scripts/patlatma_efekti.gd
-pistol_animation.tres::SpriteFrames::2179126375805928760::1773944989::0::1::::<><><>0<>0<><>::uid://q2gspx5pif2d::::res://assets/Pistol_V1.00 - SHOOTING (ALL FX).png
+pistol_animation.tres::SpriteFrames::2179126375805928760::1774108685::0::1::::<><><>0<>0<><>::uid://q2gspx5pif2d::::res://assets/Pistol_V1.00 - SHOOTING (ALL FX).png
 test.tres::Resource/BurnEffect::7987598133456684462::1773922358::0::1::::<><><>0<>0<><>::uid://d2oawcxu7cpq3::::res://scripts/test_efekti.gd
-::res://scenes/::1773957082
+::res://scenes/::1774113844
+boss_weapon.tscn::PackedScene::1570568235664628535::1774113508::0::1::::<><><>0<>0<><>::uid://jsj2abb3wxq6::::res://scripts/boss_weapon.gd<>uid://cxxe7pkf4mu8v::::res://resources/boss_weapon.tres<>uid://dninw10jfbfbv::::res://resources/boss_weapon_animation.tres
 bullet.tscn::PackedScene::7020107093094832791::1773935362::0::1::::<><><>0<>0<><>::uid://bfvegghcdo8g5::::res://assets/All_Fire_Bullet_Pixel_16x16_04.png<>uid://dueljnvbj0lfm::::res://scripts/bullet.gd
-enemy.tscn::PackedScene::7866171184974413872::1773957082::0::1::::<><><>0<>0<><>::uid://utmipu312h2k::::res://scripts/enemy.gd<>uid://cjhaoaokhgeuj::::res://Forest_Monsters_FREE/Forest_Monsters_FREE/Mushroom/Mushroom with VFX/Mushroom-Attack.png<>uid://culv5xb8vmdmq::::res://Forest_Monsters_FREE/Forest_Monsters_FREE/Mushroom/Mushroom with VFX/Mushroom-Run.png<>uid://h582482krtio::::res://Forest_Monsters_FREE/Forest_Monsters_FREE/Mushroom/Mushroom with VFX/Mushroom-Hit.png
+enemy.tscn::PackedScene::7866171184974413872::1774113844::0::1::::<><><>0<>0<><>::uid://utmipu312h2k::::res://scripts/enemy.gd<>uid://wm2a87xs38vj::::res://scenes/boss_weapon.tscn<>uid://culv5xb8vmdmq::::res://Forest_Monsters_FREE/Forest_Monsters_FREE/Mushroom/Mushroom with VFX/Mushroom-Run.png<>uid://iekxdx3w4a30::::res://Forest_Monsters_FREE/Forest_Monsters_FREE/Mushroom/Mushroom with VFX/Mushroom-Idle.png
 gun.tscn::PackedScene::4812592026178468934::1773919799::0::1::::<><><>0<>0<><>::uid://bblbhhdsykwl2::::res://scripts/gun.gd<>uid://q2gspx5pif2d::::res://assets/Pistol_V1.00 - SHOOTING (ALL FX).png
 long_rifle.tscn::PackedScene::7899422447728150561::1773933091::0::1::::<><><>0<>0<><>::uid://bbs8dyixkvqov::::res://scenes/weapon.tscn<>uid://deymcnj3w8ld3::::res://resources/ar15.tres<>uid://clpghuual5upp::::res://Assault_rifle_V1.00/WEAPON/[FULL_AUTO]_Assault_rifle_V1.00.png
-Main.tscn::PackedScene::192488269377136372::1773952734::0::1::::<><><>0<>0<><>::uid://bj5pbs8tmryhd::::res://scenes/player.tscn<>uid://dkcoxp23l7dbs::::res://scenes/enemy.tscn
-player.tscn::PackedScene::3080965147021441209::1773954943::0::1::::<><><>0<>0<><>::uid://bg3qtxld677tc::::res://scripts/player.gd<>uid://1djfgs010vtc::::res://Spritesheets/Spritesheets/idle.png<>uid://cwb6lqlhd845u::::res://Spritesheets/Spritesheets/roll_1.png<>uid://c2cfjg3nx1568::::res://Spritesheets/Spritesheets/roll_2.png<>uid://dkssllvtxya30::::res://scenes/long_rifle.tscn<>uid://bbs8dyixkvqov::::res://scenes/weapon.tscn<>uid://cy0oxhh8r8i1v::::res://Spritesheets/Spritesheets/walk.png
+Main.tscn::PackedScene::192488269377136372::1774112363::0::1::::<><><>0<>0<><>::uid://b530f5f448vjt::::res://bg.jpg<>uid://bj5pbs8tmryhd::::res://scenes/player.tscn<>uid://dkcoxp23l7dbs::::res://scenes/enemy.tscn
+player.tscn::PackedScene::3080965147021441209::1774113456::0::1::::<><><>0<>0<><>::uid://bg3qtxld677tc::::res://scripts/player.gd<>uid://1djfgs010vtc::::res://Spritesheets/Spritesheets/idle.png<>uid://cwb6lqlhd845u::::res://Spritesheets/Spritesheets/roll_1.png<>uid://c2cfjg3nx1568::::res://Spritesheets/Spritesheets/roll_2.png<>uid://dkssllvtxya30::::res://scenes/long_rifle.tscn<>uid://bbs8dyixkvqov::::res://scenes/weapon.tscn<>uid://cy0oxhh8r8i1v::::res://Spritesheets/Spritesheets/walk.png
 weapon.tscn::PackedScene::2495778619025278681::1773935542::0::1::::<><><>0<>0<><>::uid://bhqhp233iaa66::::res://scripts/weapon.gd<>uid://bypck14obtv6j::::res://resources/default_pistol.tres<>uid://q2gspx5pif2d::::res://assets/Pistol_V1.00 - SHOOTING (ALL FX).png
-::res://scripts/::1773957409
-bullet.gd::GDScript::8571981109224667674::1773935579::0::1::::<>Area2D<><>0<>0<><>::
-enemy.gd::GDScript::1443743760406567476::1773957082::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://scripts/::1774113823
+boss_shotgun.gd::GDScript::5332273032004662327::1774113823::0::1::::ShotgunEffect<>WeaponEffect<><>0<>0<><>::
+boss_weapon.gd::GDScript::669453063314246891::1774113508::0::1::::<>Node2D<><>0<>0<><>::
+bullet.gd::GDScript::8571981109224667674::1774112754::0::1::::<>Area2D<><>0<>0<><>::
+enemy.gd::GDScript::1443743760406567476::1774112240::0::1::::<>CharacterBody2D<><>0<>0<><>::
 gun.gd::GDScript::2479391273324084537::1773932305::0::1::::Weapons<>Node2D<><>0<>0<><>::
 patlatma_efekti.gd::GDScript::2327986287576306152::1773935542::0::1::::PatlatmaEffect<>WeaponEffect<><>0<>0<><>::
 pistol.gd::GDScript::681064097846953894::1772205011::0::1::::<>Node2D<><>0<>0<><>::
-player.gd::GDScript::2866362949812355480::1773955471::0::1::::Player<>CharacterBody2D<><>0<>0<><>::
+player.gd::GDScript::2866362949812355480::1774113723::0::1::::Player<>CharacterBody2D<><>0<>0<><>::
 test_efekti.gd::GDScript::9083301546857691720::1773924988::0::1::::BurnEffect<>WeaponEffect<><>0<>0<><>::
-weapon.gd::GDScript::2911225901750084029::1773952602::0::1::::Weapon<>Node2D<><>0<>0<><>::
-weapon_data.gd::GDScript::186387710391455986::1773937129::0::1::::WeaponData<>Resource<><>0<>0<><>::
+weapon.gd::GDScript::2911225901750084029::1774112810::0::1::::Weapon<>Node2D<><>0<>0<><>::
+weapon_data.gd::GDScript::186387710391455986::1774113251::0::1::::WeaponData<>Resource<><>0<>0<><>::
 weapon_effects.gd::GDScript::8823857691852616725::1773935307::0::1::::WeaponEffect<>Resource<><>0<>0<><>::
 ::res://scripts/ASSAULT RIFLE/::1773929494
 ::res://sprites/::1772112215

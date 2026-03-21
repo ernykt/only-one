@@ -7,13 +7,20 @@ class_name Weapon
 @onready var marker_2d: Marker2D = $Marker2D
 
 var recoil: float
+var original_x: float
 
 func _ready():
+	original_x = position.x
 	weapon_setup()
 	if data:
 		animated_sprite.sprite_frames = data.animated_sprite
 
-func shoot(_target):
+func shoot(_target):# Ateş etme fonksiyonunun (shoot) en başında orijinal yerini kaydet
+	var tween = create_tween()
+	tween.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	tween.tween_property(self, "position:x", original_x - data.kickback_magnitude, data.kickback_duration)
+	tween.tween_property(self, "position:x", original_x, data.recovery_duration)
+	
 	if animated_sprite.is_playing() and not animated_sprite.animation == "Idle": return
 	recoil = randf_range(marker_2d.global_position.y - data.recoil_magnitude, marker_2d.global_position.y + data.recoil_magnitude)
 	animated_sprite.play("Fire")

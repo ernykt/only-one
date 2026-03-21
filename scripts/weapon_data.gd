@@ -11,6 +11,10 @@ class_name WeaponData
 @export var damage: int = 10
 @export var fire_rate: float = 0.5
 @export var recoil_magnitude: float = 25.0
+@export var kickback_magnitude: float = 25.0
+@export var recovery_duration: float = 0.3
+@export var kickback_duration: float = 0.05
+@export var knockback_force: float = 10.0
 
 @export_group("Special Abilities")
 @export var effects: Array[WeaponEffect] # Bileşen listesi

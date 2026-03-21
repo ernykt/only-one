@@ -103,6 +103,11 @@ animations = [{
 "name": &"Dash",
 "speed": 8.0
 }, {
+"frames": [],
+"loop": true,
+"name": &"Death",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qlg0r")
@@ -116,7 +121,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_smehm")
 }],
-"loop": false,
+"loop": true,
 "name": &"Idle",
 "speed": 6.0
 }, {
@@ -133,7 +138,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_a8ls1")
 }],
-"loop": false,
+"loop": true,
 "name": &"Move",
 "speed": 8.0
 }]
@@ -142,13 +147,15 @@ animations = [{
 size = Vector2(448, 384)
 
 [node name="Player" type="CharacterBody2D" unique_id=1014652290]
+position = Vector2(16, 0)
 script = ExtResource("1_tuyoq")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=783786143]
 position = Vector2(0, -31.999998)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_ur7pv")
-animation = &"Dash"
+animation = &"Death"
+autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1565453858]
 position = Vector2(-8, 0)
@@ -169,5 +176,6 @@ one_shot = true
 one_shot = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1262047907]
+zoom = Vector2(0.5, 0.5)
 
 [connection signal="timeout" from="DashCoolDown" to="." method="_on_dash_cool_down_timeout"]

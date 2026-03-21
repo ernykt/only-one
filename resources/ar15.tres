@@ -13,5 +13,6 @@ weapon_name = "AR15"
 animated_sprite = ExtResource("1_rcqa1")
 fire_rate = 25.0
 recoil_magnitude = 20.0
+kickback_magnitude = 20.0
 effects = Array[ExtResource("1_o8s8l")]([ExtResource("3_66bgy")])
 metadata/_custom_type_script = "uid://cwj1p1utj15w"

@@ -13,7 +13,7 @@ func _ready():
 	if data:
 		animated_sprite.sprite_frames = data.animated_sprite
 
-func shoot(_target):
+func shoot():
 	if animated_sprite.is_playing() and animated_sprite.animation == "Fire":
 		return
 	
@@ -24,6 +24,9 @@ func shoot(_target):
 	
 	for i in range(pellet_count):
 		var bullet_instance = data.projectile_scene.instantiate()
+		if bullet_instance.has_signal("hit_target"):
+			bullet_instance.hit_target.connect(_on_projectile_impact)
+			
 		get_tree().current_scene.add_child(bullet_instance)
 		
 		bullet_instance.global_position = marker_2d.global_position
@@ -33,12 +36,13 @@ func shoot(_target):
 		
 		bullet_instance.global_position.y += randf_range(-data.recoil_magnitude, data.recoil_magnitude)
 		
-		if bullet_instance.has_signal("hit_target"):
-			bullet_instance.hit_target.connect(_on_projectile_impact)
 		
 func _process(_delta: float) -> void:
-	shoot(boss.player)
-	look_at(boss.player.global_position)
+	if boss.player:
+		if boss.current_state == boss.State.ATTACK:
+			if not boss.player.current_state == boss.player.State.DEATH:
+				shoot()
+		look_at(boss.player.global_position)
 	rotation_degrees = posmod(rotation_degrees, 360.0)
 	if rotation_degrees > 90 and rotation_degrees < 270:
 		animated_sprite.flip_v = true
@@ -47,10 +51,6 @@ func _process(_delta: float) -> void:
 
 func weapon_setup():
 	animated_sprite.speed_scale = data.fire_rate
-
-func _on_animated_sprite_animation_finished() -> void:
-	if animated_sprite.animation == "Fire":
-		animated_sprite.play("Idle")
 
 func _on_projectile_impact(body : Node):
 	for effect in data.effects:

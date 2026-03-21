@@ -4,7 +4,7 @@
 [ext_resource type="SpriteFrames" uid="uid://dninw10jfbfbv" path="res://resources/boss_weapon_animation.tres" id="1_ldd0s"]
 [ext_resource type="PackedScene" uid="uid://c7auexy0jjrgp" path="res://scenes/bullet.tscn" id="2_cudnc"]
 [ext_resource type="Script" uid="uid://cwj1p1utj15w" path="res://scripts/weapon_data.gd" id="2_ixqs5"]
-[ext_resource type="Resource" uid="uid://bjceub6g48pn7" path="res://resources/patlatma.tres" id="3_m2jug"]
+[ext_resource type="Resource" uid="uid://3u5wigu5olhb" path="res://resources/boss_shotgun.tres" id="3_ldd0s"]
 
 [resource]
 script = ExtResource("2_ixqs5")
@@ -12,5 +12,6 @@ projectile_scene = ExtResource("2_cudnc")
 weapon_name = "shotgun"
 animated_sprite = ExtResource("1_ldd0s")
 damage = 50
-effects = Array[ExtResource("1_1lh3c")]([ExtResource("3_m2jug")])
+knockback_force = 150.0
+effects = Array[ExtResource("1_1lh3c")]([ExtResource("3_ldd0s")])
 metadata/_custom_type_script = "uid://cwj1p1utj15w"

@@ -1,3 +1,4 @@
+ShotgunEffect
 SpriteFrames
 WeaponData
 WeaponEffect
