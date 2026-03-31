@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://culv5xb8vmdmq" path="res://Forest_Monsters_FREE/Forest_Monsters_FREE/Mushroom/Mushroom with VFX/Mushroom-Run.png" id="2_md0e3"]
 [ext_resource type="Texture2D" uid="uid://rk5g2tk7vctt" path="res://Forest_Monsters_FREE/Forest_Monsters_FREE/Mushroom/Mushroom with VFX/Mushroom-Die.png" id="2_xwavj"]
 [ext_resource type="Texture2D" uid="uid://iekxdx3w4a30" path="res://Forest_Monsters_FREE/Forest_Monsters_FREE/Mushroom/Mushroom with VFX/Mushroom-Idle.png" id="3_5uy6h"]
+[ext_resource type="Texture2D" uid="uid://cjhaoaokhgeuj" path="res://Forest_Monsters_FREE/Forest_Monsters_FREE/Mushroom/Mushroom with VFX/Mushroom-Attack.png" id="5_nenq2"]
+[ext_resource type="PackedScene" uid="uid://cp0vrwrs7pcfg" path="res://scenes/boss_bazooka.tscn" id="6_xwavj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ile5s"]
 atlas = ExtResource("2_xwavj")
@@ -126,6 +128,46 @@ region = Rect2(400, 0, 80, 64)
 atlas = ExtResource("3_5uy6h")
 region = Rect2(480, 0, 80, 64)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_thsr5"]
+atlas = ExtResource("5_nenq2")
+region = Rect2(0, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekh6n"]
+atlas = ExtResource("5_nenq2")
+region = Rect2(80, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2sbpf"]
+atlas = ExtResource("5_nenq2")
+region = Rect2(160, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78kod"]
+atlas = ExtResource("5_nenq2")
+region = Rect2(240, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_605iw"]
+atlas = ExtResource("5_nenq2")
+region = Rect2(320, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6q4o"]
+atlas = ExtResource("5_nenq2")
+region = Rect2(400, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2tuss"]
+atlas = ExtResource("5_nenq2")
+region = Rect2(480, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7v6cf"]
+atlas = ExtResource("5_nenq2")
+region = Rect2(560, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vab5u"]
+atlas = ExtResource("5_nenq2")
+region = Rect2(640, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qiusc"]
+atlas = ExtResource("5_nenq2")
+region = Rect2(720, 0, 80, 64)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_shcg2"]
 animations = [{
 "frames": [{
@@ -232,6 +274,41 @@ animations = [{
 "loop": true,
 "name": &"Idle",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_thsr5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ekh6n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2sbpf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_78kod")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_605iw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x6q4o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2tuss")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7v6cf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vab5u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qiusc")
+}],
+"loop": false,
+"name": &"Rage",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_md0e3"]
@@ -240,17 +317,15 @@ size = Vector2(144, 144)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ra3w"]
 size = Vector2(128, 128)
 
-[node name="Boss" type="CharacterBody2D" unique_id=642737321]
+[node name="Boss" type="CharacterBody2D" unique_id=642737321 groups=["enemy"]]
 script = ExtResource("1_md0e3")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1562499963]
 position = Vector2(1.8189894e-12, -200)
 scale = Vector2(9.712485, 9.865606)
 sprite_frames = SubResource("SpriteFrames_shcg2")
-animation = &"Die"
-autoplay = "Follow"
-frame = 14
-frame_progress = 0.9390904
+animation = &"Rage"
+autoplay = "Rage"
 speed_scale = 2.0
 
 [node name="Area2D" type="Area2D" parent="." unique_id=247874]
@@ -269,7 +344,13 @@ offset_right = 4.0
 offset_bottom = -237.0
 max_value = 500.0
 
-[node name="BossWeapon" parent="." unique_id=403025996 instance=ExtResource("2_c4w8v")]
-position = Vector2(8, -8)
+[node name="BossWeapon" parent="." unique_id=403025996 groups=["enemy"] instance=ExtResource("2_c4w8v")]
+
+[node name="BossBazooka" parent="." unique_id=1226572985 instance=ExtResource("6_xwavj")]
+position = Vector2(16, 0)
+
+[node name="AttackTimer" type="Timer" parent="." unique_id=950719537]
+one_shot = true
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]

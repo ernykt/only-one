@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://7e03joyd41b"]
+
+[ext_resource type="Script" uid="uid://dtg0ubdmxcsch" path="res://scripts/rocket.gd" id="1_3341w"]
+[ext_resource type="Texture2D" uid="uid://cxih3sm2wc625" path="res://M20 Rocket.png" id="2_agf72"]
+[ext_resource type="SpriteFrames" uid="uid://d3s5gmfrbn06v" path="res://resources/explosion_animation.tres" id="3_agf72"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y25gk"]
+size = Vector2(58.666668, 12)
+
+[node name="Rocket" type="Area2D" unique_id=1044636716]
+scale = Vector2(3, 3)
+script = ExtResource("1_3341w")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1109646840]
+texture = ExtResource("2_agf72")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1175509429]
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("3_agf72")
+animation = &"Explosion"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=473883122]
+position = Vector2(-6.357829e-07, -1.3333333)
+shape = SubResource("RectangleShape2D_y25gk")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=319576629]
+position = Vector2(10.666667, 0)
+rect = Rect2(-40, -13.333334, 58.666668, 26.666668)
+
+[node name="ExplosionTimer" type="Timer" parent="." unique_id=433713726]
+wait_time = 2.5
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="Sprite2D" to="." method="_on_sprite_2d_animation_finished"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="timeout" from="ExplosionTimer" to="." method="_on_explosion_timer_timeout"]

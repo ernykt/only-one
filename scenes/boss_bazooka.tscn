@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cp0vrwrs7pcfg"]
+
+[ext_resource type="Script" uid="uid://crsprxw01xa8e" path="res://scripts/boss_bazooka.gd" id="1_y1yb0"]
+[ext_resource type="Resource" uid="uid://drs67lttrx1c6" path="res://resources/boss_bazooka.tres" id="2_m71ct"]
+[ext_resource type="SpriteFrames" uid="uid://c4oynki2q3tsr" path="res://resources/boss_bazooka_animation.tres" id="3_m71ct"]
+
+[node name="BossBazooka" type="Node2D" unique_id=1226572985]
+script = ExtResource("1_y1yb0")
+data = ExtResource("2_m71ct")
+
+[node name="BazookaMarker" type="Marker2D" parent="." unique_id=23780437]
+position = Vector2(488, 8)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1321057786]
+position = Vector2(328, 8)
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("3_m71ct")
+animation = &"Idle"

@@ -146,7 +146,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqtel"]
 size = Vector2(448, 384)
 
-[node name="Player" type="CharacterBody2D" unique_id=1014652290]
+[node name="Player" type="CharacterBody2D" unique_id=1014652290 groups=["player"]]
 position = Vector2(16, 0)
 script = ExtResource("1_tuyoq")
 
@@ -176,6 +176,13 @@ one_shot = true
 one_shot = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1262047907]
+position = Vector2(-8, -56)
 zoom = Vector2(0.5, 0.5)
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=1189339660]
+offset_left = -8.0
+offset_top = -72.0
+offset_right = -4.0
+offset_bottom = -45.0
 
 [connection signal="timeout" from="DashCoolDown" to="." method="_on_dash_cool_down_timeout"]

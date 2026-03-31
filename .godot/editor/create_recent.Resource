@@ -1,5 +1,7 @@
-ShotgunEffect
+BurnEffect
 SpriteFrames
+RocketEffect
 WeaponData
+ShotgunEffect
 WeaponEffect
 Resource

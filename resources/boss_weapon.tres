@@ -11,7 +11,6 @@ script = ExtResource("2_ixqs5")
 projectile_scene = ExtResource("2_cudnc")
 weapon_name = "shotgun"
 animated_sprite = ExtResource("1_ldd0s")
-damage = 50
 knockback_force = 150.0
 effects = Array[ExtResource("1_1lh3c")]([ExtResource("3_ldd0s")])
 metadata/_custom_type_script = "uid://cwj1p1utj15w"

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3 uid="uid://drs67lttrx1c6"]
+
+[ext_resource type="SpriteFrames" uid="uid://c4oynki2q3tsr" path="res://resources/boss_bazooka_animation.tres" id="1_nkey8"]
+[ext_resource type="Script" uid="uid://dxylv862q2ihp" path="res://scripts/weapon_effects.gd" id="1_wn5rb"]
+[ext_resource type="Script" uid="uid://cwj1p1utj15w" path="res://scripts/weapon_data.gd" id="2_dvclg"]
+[ext_resource type="PackedScene" uid="uid://7e03joyd41b" path="res://scenes/rocket.tscn" id="3_pl5od"]
+[ext_resource type="Resource" uid="uid://eqi0d1qqmljt" path="res://resources/rocket_effect.tres" id="3_xdy2k"]
+
+[resource]
+script = ExtResource("2_dvclg")
+projectile_scene = ExtResource("3_pl5od")
+weapon_name = "bazooka"
+animated_sprite = ExtResource("1_nkey8")
+damage = 1
+fire_rate = 5.0
+effects = Array[ExtResource("1_wn5rb")]([ExtResource("3_xdy2k")])
+metadata/_custom_type_script = "uid://cwj1p1utj15w"

@@ -1,5 +1,0 @@
-extends WeaponEffect
-class_name PatlatmaEffect
-
-func on_hit(target_name: Node, source: Node, damage: int):
-	target_name.take_damage(damage)

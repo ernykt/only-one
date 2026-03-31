@@ -4,13 +4,14 @@
 [ext_resource type="SpriteFrames" uid="uid://s7rn2t6yyfrn" path="res://resources/ar15_animation.tres" id="1_rcqa1"]
 [ext_resource type="Script" uid="uid://cwj1p1utj15w" path="res://scripts/weapon_data.gd" id="2_3kp1h"]
 [ext_resource type="PackedScene" uid="uid://c7auexy0jjrgp" path="res://scenes/bullet.tscn" id="2_rcqa1"]
-[ext_resource type="Resource" uid="uid://bjceub6g48pn7" path="res://resources/patlatma.tres" id="3_66bgy"]
+[ext_resource type="Resource" uid="uid://ryucu4bbptur" path="res://resources/burn_effect.tres" id="3_66bgy"]
 
 [resource]
 script = ExtResource("2_3kp1h")
 projectile_scene = ExtResource("2_rcqa1")
 weapon_name = "AR15"
 animated_sprite = ExtResource("1_rcqa1")
+damage = 50
 fire_rate = 25.0
 recoil_magnitude = 20.0
 kickback_magnitude = 20.0

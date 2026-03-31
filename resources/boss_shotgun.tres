@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ShotgunEffect" format=3 uid="uid://3u5wigu5olhb"]
 
-[ext_resource type="Script" uid="uid://ch7800840b1rv" path="res://scripts/boss_shotgun.gd" id="1_y74qi"]
+[ext_resource type="Script" uid="uid://ch7800840b1rv" path="res://scripts/boss_shotgun_effect.gd" id="1_y74qi"]
 
 [resource]
 script = ExtResource("1_y74qi")

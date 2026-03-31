@@ -6,16 +6,20 @@ class_name Player
 @onready var dash_cool_down: Timer = $DashCoolDown
 @onready var sprite_2d: AnimatedSprite2D = $Sprite2D
 @onready var boss: CharacterBody2D = $"../Boss"
+@onready var health_bar: ProgressBar = $HealthBar
 
 enum State { IDLE, MOVE, DASH, DEATH }
 
-var health = 100
-var speed = 300.0
+var health: int = 100
+var speed: float = 450.0
 var current_state: State = State.IDLE
 var last_state: State = State.IDLE
 var dash_speed: int = 900
 var dash_direction = Vector2.ZERO
 var can_dash: bool = true
+
+func _ready() -> void:
+	health_bar.value = health
 
 func _physics_process(_delta: float) -> void:
 	match current_state:
@@ -46,7 +50,7 @@ func change_state(new_state: State):
 		State.DASH:
 			sprite_2d.play("Dash")
 		State.DEATH:
-			pass
+			sprite_2d.play("Idle")
 
 func handle_shooting():
 	if Input.is_action_pressed("shoot"):
@@ -58,8 +62,8 @@ func handle_shooting():
 func move_state():
 	handle_sprite_direction()
 	var dir = get_movement_direction()
-	if health <= 0:
-		change_state(State.DEATH)
+	#if health <= 0:
+	#	change_state(State.DEATH)
 	if dir == Vector2.ZERO:
 		change_state(State.IDLE)
 		return
@@ -71,8 +75,8 @@ func move_state():
 
 func idle_state():
 	var dir = get_movement_direction()
-	if health <= 0:
-		change_state(State.DEATH)
+	#if health <= 0:
+	#	change_state(State.DEATH)
 	if dir != Vector2.ZERO:
 		change_state(State.MOVE)
 		return
@@ -82,8 +86,8 @@ func idle_state():
 	velocity = velocity.lerp(Vector2.ZERO, 0.2)
 	
 func dash_state():
-	if health <= 0:
-		change_state(State.DEATH)
+	#if health <= 0:
+	#	change_state(State.DEATH)
 	if dash_timer.time_left <= 0:
 		change_state(State.IDLE)
 	if can_dash:
@@ -97,7 +101,6 @@ func dash_state():
 		velocity = dash_direction * dash_speed
 		
 func death_state():
-	sprite_2d.play("Idle")
 	if sprite_2d.frame == 1:
 		sprite_2d.stop()
 	velocity = velocity.lerp(Vector2.ZERO, 0.2)

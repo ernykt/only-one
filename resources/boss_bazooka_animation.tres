@@ -1,0 +1,65 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://c4oynki2q3tsr"]
+
+[ext_resource type="Texture2D" uid="uid://c1rfahfn3drfa" path="res://[SHOOT WITH MUZZLE FLASH] Thick Bazooka - M20.png" id="1_rini3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bpc4k"]
+atlas = ExtResource("1_rini3")
+region = Rect2(384, 0, 192, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1kbgp"]
+atlas = ExtResource("1_rini3")
+region = Rect2(576, 0, 192, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gijo8"]
+atlas = ExtResource("1_rini3")
+region = Rect2(768, 0, 192, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_leynj"]
+atlas = ExtResource("1_rini3")
+region = Rect2(960, 0, 192, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18hs0"]
+atlas = ExtResource("1_rini3")
+region = Rect2(1152, 0, 192, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_upwxg"]
+atlas = ExtResource("1_rini3")
+region = Rect2(1344, 0, 192, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jpbmk"]
+atlas = ExtResource("1_rini3")
+region = Rect2(0, 0, 192, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bpc4k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1kbgp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gijo8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_leynj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18hs0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_upwxg")
+}],
+"loop": false,
+"name": &"Fire",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jpbmk")
+}],
+"loop": false,
+"name": &"Idle",
+"speed": 15.0
+}]
